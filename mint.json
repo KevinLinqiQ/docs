@@ -7,23 +7,23 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#1D4ED8",
+    "light": "#1D4ED8",
+    "dark": "#1D4ED8",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#1D4ED8",
+      "to": "#1D4ED8"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:kevin@linqiq.net"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://linqiq.net"
   },
   "tabs": [
     {
@@ -33,19 +33,9 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
+      "name": "Contact",
+      "icon": "phone",
       "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
     }
   ],
   "navigation": [
@@ -55,17 +45,6 @@
         "introduction",
         "quickstart",
         "development"
-      ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
       ]
     },
     {
@@ -84,8 +63,8 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/kevin_loo",
+    "github": "https://github.com/lookevink",
+    "linkedin": "https://www.linkedin.com/in/kevin-endex/"
   }
 }
