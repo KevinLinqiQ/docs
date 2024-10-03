@@ -1,0 +1,127 @@
+openapi: 3.0.0
+info:
+  title: LinqiQ
+  version: 1.0.0
+servers:
+  - url: http://{{baseurl}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+paths:
+  /api/v1/analysis/image:
+    post:
+      tags:
+        - default
+      summary: Photo Analysis
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                - imageUrl: >-
+                    https://ulgucrkicfwmrtwjntxa.supabase.co/storage/v1/object/public/public_photos/prop/3335/preview.png
+                  imageName: '3335'
+                  uid: '3335'
+                - imageUrl: >-
+                    https://ulgucrkicfwmrtwjntxa.supabase.co/storage/v1/object/public/public_photos/prop/3331/preview.png
+                  imageName: '3331'
+                  uid: '3331'
+                - imageUrl: >-
+                    https://ulgucrkicfwmrtwjntxa.supabase.co/storage/v1/object/public/public_photos/prop/3338/preview.png
+                  imageName: '3338'
+                  uid: '3338'
+      responses:
+        '200':
+          description: OK
+          headers:
+            x-params:
+              schema:
+                type: string
+                example: '{}'
+            vary:
+              schema:
+                type: string
+                example: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+            content-type:
+              schema:
+                type: string
+                example: application/json
+            Date:
+              schema:
+                type: string
+                example: Sun, 29 Sep 2024 19:20:13 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Single Photo Analysis
+                  value:
+                    imageId: 1bdba808-c1ec-48f0-88f4-d54dde42de8d
+                    analysis:
+                      category: Front of Structure
+                      condition: 8
+                      confidence: 9
+                      explanation: >-
+                        The front of the structure appears to be in good
+                        condition. The exterior walls and roof look
+                        well-maintained, and the driveway is clear and in good
+                        shape. There are no visible signs of damage or
+                        significant wear.
+                example-1:
+                  summary: Single Photo Analysis
+                  value:
+                    - imageId: 9e84a48d-5d9b-4512-8b99-bd1bee8c2ff0
+                      analysis:
+                        category: Hallway
+                        condition: 8
+                        confidence: 9
+                        explanation: >-
+                          The hallway appears to be in good condition with clean
+                          hardwood floors and well-maintained walls. The
+                          lighting fixture is modern, and the space looks
+                          well-kept overall. There are no visible signs of
+                          damage or wear.
+                    - imageId: f86da449-eecc-495f-a446-2d774daf46ee
+                      analysis:
+                        category: Front of Structure
+                        condition: 8
+                        confidence: 9
+                        explanation: >-
+                          The front of the structure appears to be
+                          well-maintained with no visible damage. The paint
+                          looks fresh, the roof is in good condition, and the
+                          landscaping is tidy. The driveway and pathways are
+                          clean. Minor wear and tear might be present but does
+                          not detract from the overall good condition.
+                    - imageId: 35ec6127-3817-4853-ac43-ddd39a150f98
+                      analysis:
+                        category: Front of Structure
+                        condition: 8
+                        confidence: 9
+                        explanation: >-
+                          The front of the structure appears to be in very good
+                          condition. The brickwork is intact, the paint on the
+                          door and shutters is not peeling, and the windows
+                          appear to be in good shape. There is no visible damage
+                          or need for major repairs. The only minor issue might
+                          be the cleanliness of the steps or the need for some
+                          minor touch-ups to maintain the appearance.
